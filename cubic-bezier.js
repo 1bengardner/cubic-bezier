@@ -144,6 +144,15 @@ self.prototype = {
 		];
 	},
 	
+	coordinatesToOffsets: function(coordinates) {
+		var p = this.padding, w = this.canvas.width, h = this.canvas.height;
+		
+		return {
+			left: w * (coordinates[0] * (1 - p[3] - p[1]) + p[3]) + 'px',
+			top: h * (1 - coordinates[1] * (1 - p[0] - p[2]) - p[0]) + 'px'
+		};
+	},
+  
 	plot: function(settings) {
 		var xy = this.bezier.coordinates,
 			ctx = this.canvas.getContext('2d');

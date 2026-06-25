@@ -341,6 +341,22 @@ duration.oninput = function() {
 	updateCopyInputs();
 };
 
+Array.from(values.querySelectorAll("input")).forEach(function(input, i) {
+	input.oninput = function() {
+		var coords = bezier.coordinates.slice();
+		
+		coords[i] = parseFloat(this.value);
+		
+		var b = new CubicBezier(coords);
+		
+		P1.style.prop(bezierCanvas.coordinatesToOffsets(b.P1));
+		P2.style.prop(bezierCanvas.coordinatesToOffsets(b.P2));
+		
+		update();
+		updateDelayed();
+	};
+});
+
 window['import'].onclick = function() {
 	json.value = '';
 	
@@ -431,7 +447,7 @@ function update() {
 		prettyOffsets = bezier.coordinates.toString().split(',');
 	
 	for(var i=params.length; i--;) {
-		params[i].textContent = prettyOffsets[i]; 
+		params[i].value = prettyOffsets[i];
 	}
 }
 function updateCopyInputs(){
@@ -453,7 +469,7 @@ function updateDelayed() {
 	var hash = '#' + bezier.coordinates,
 		size = 16 * pixelDepth;
 	
-	bezierCode.parentNode.href = hash;
+	bezierCode.querySelector('a').href = hash;
 	
 	if(history.pushState) {
 		history.pushState(null, null, hash);

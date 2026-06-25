@@ -68,7 +68,7 @@ a:hover {
 	text-decoration: none;
 }
 
-	h1 > a {
+	h1 a {
 		font-size: clamp(1.2rem, 2vw + .75rem, 2.5rem);
 		white-space: nowrap;
 		color: inherit;
@@ -577,7 +577,7 @@ body > footer {
 		padding: 0 5% 1em;
 	}
 
-	h1 > a {
+	h1 a {
 		width: 100%;
 	}
 
@@ -598,7 +598,7 @@ body > footer {
 }
 
 @media (max-width: 600px){
-	h1 > a {
+	h1 a {
 		letter-spacing: -.05ch;
 	}
 }
@@ -655,3 +655,17 @@ body > footer {
 		display: block;
 		font-size: 11px;
 	}
+
+.param {
+		text-align: right;
+		font: inherit;
+		width: 4ch;
+		field-sizing: content;
+		background: transparent;
+		border: none;
+		outline: none;
+}
+
+.param:focus {
+		background: rgba(255,255,255,.15);
+}
