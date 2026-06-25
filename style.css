@@ -78,7 +78,7 @@ a:hover {
 button, .button {
 	padding: .3em .5em;
 	border: 0;
-	background: #ccc;
+	background: #f08;
 	color: white;
 	font-size: 50%;
 	text-transform: uppercase;
@@ -88,7 +88,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-	background: #f08;
+	background: #a50b5d;
 }
 
 button:focus, .button:focus {
@@ -204,6 +204,7 @@ input[type="range"] {
 	font: inherit;
 	border-radius: 99px;
 	box-shadow: 1px 1px 3px rgba(0,0,0,.5) inset;
+	cursor: pointer;
 }
 
 	input[type="range"]::-webkit-slider-thumb {
