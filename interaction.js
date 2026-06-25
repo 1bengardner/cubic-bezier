@@ -288,6 +288,7 @@ curve.onmousemove = function(evt) {
 	this.parentNode.setAttribute('data-progression', Math.round(100 * (3*height/4 - y) / (height * .5)));
 };
 copy.onclick = function(){
+	copybuttons.classList.remove('copied');
 	copystatement.select();
 	copystatement.setSelectionRange(0, 99999);
 	document.execCommand("copy");
@@ -296,6 +297,7 @@ copy.onclick = function(){
 	copybuttons.addEventListener("animationend", handleCopyAnimationComplete, false);
 }
 handleOptionCopy = function(){
+	copybuttons.classList.remove('copied');
 	this.select();
 	this.setSelectionRange(0, 99999);
 	document.execCommand("copy");
@@ -485,7 +487,7 @@ function updateDelayed() {
 	
 	faviconCtx
 		.clearRect(0, 0, size, size)
-		.prop('fillStyle', '#0ab')
+		.prop('fillStyle', '#83f')
 		.roundRect(0, 0, size, size, 2)
 		.fill()
 		.drawImage(current, 0, 0, size, size);
@@ -493,5 +495,5 @@ function updateDelayed() {
 	
 	$('link[rel="shortcut icon"]').setAttribute('href', favicon.toDataURL());
 	
-	document.title = bezier + ' ✿ cubic-bezier.com';
+	document.title = bezier + ' | Ben Gardner';
 }

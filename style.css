@@ -61,7 +61,7 @@ h1 {
 }
 
 a {
-	color: #f08;
+	color: #83f;
 }
 
 a:hover {
@@ -78,7 +78,7 @@ a:hover {
 button, .button {
 	padding: .3em .5em;
 	border: 0;
-	background: #f08;
+	background: #83f;
 	color: white;
 	font-size: 50%;
 	text-transform: uppercase;
@@ -88,7 +88,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-	background: #a50b5d;
+	background: #62a;
 }
 
 button:focus, .button:focus {
@@ -106,12 +106,12 @@ button:focus, .button:focus {
 }
 
 #copybuttons.copyoptions-open #copy {
-	background-color: #f08;
+	background-color: #83f;
 	border-bottom-left-radius: 0;
 }
 
 #copybuttons.copyoptions-open #copyoptionstoggle {
-	background-color: #a50b5d;
+	background-color: #62a;
 	border-bottom-right-radius: 0;
 	box-shadow: none;
 }
@@ -128,7 +128,7 @@ button:focus, .button:focus {
 	position: absolute;
 	top: 100%;
 	right: 0;
-	background-color: #f08;
+	background-color: #83f;
 	padding: 0.2em 0.3em;
 	border-radius: .2em 0 .2em .2em;
 	overflow: hidden;
@@ -142,7 +142,7 @@ button:focus, .button:focus {
 
 #copyoptions > input {
 	opacity: 1;
-	background-color: #f08;
+	background-color: #83f;
 	margin-bottom: 0.4em;
 	margin-top: 0.4em;
 	display: block;
@@ -158,7 +158,7 @@ button:focus, .button:focus {
 }
 
 #copyoptions > input:hover {
-	background: #a50b5d;
+	background: #62a;
 }
 
 #copybuttons.copyoptions-open #copyoptions {
@@ -177,18 +177,18 @@ button:focus, .button:focus {
 
 	#copybuttons:hover #copy,
 	#copybuttons:hover #copyoptionstoggle {
-		background: #f08;
+		background: #83f;
 	}
 
 	#copybuttons #copy:hover,
 	#copybuttons #copyoptionstoggle:hover,
 	#copybuttons.copyoptions-open:hover #copyoptionstoggle {
-		background: #a50b5d;
+		background: #62a;
 	}
 
 @keyframes copied {
-	0%   { background: #599133; }
-	100% { background: #ccc; }
+	0%   { background: #5a4; }
+	100% { background: #83f; }
 }
 #copybuttons.copied #copyoptionstoggle,
 #copybuttons.copied #copy {
@@ -214,9 +214,9 @@ input[type="range"] {
 		width: 13px;
 		border-radius: 50%;
 		box-shadow: -1px -1px 5px rgba(0,0,0,.5) inset,
-			-1px -1px 4px 3px #f08 inset,
+			-1px -1px 4px 3px #83f inset,
 			1px 1px 3px rgba(0,0,0,.3),
-			-199px 0 0 198px rgba(255, 0, 136, .2);
+			-199px 0 0 198px rgba(136, 0, 255, .2);
 	}
 
 	input[type="range"]:in-range {
@@ -311,11 +311,11 @@ header {
 }
 
 #P1 {
-	background: #f08;
+	background: #83f;
 }
 
 #P2 {
-	background: #0ab;
+	background: #09a;
 }
 
 #P3 {
@@ -324,11 +324,11 @@ header {
 }
 
 #P1x, #P1y {
-	color: #f08;
+	color: #83f;
 }
 
 #P2x, #P2y {
-	color: #0ab;
+	color: #09a;
 }
 
 canvas#curve {
@@ -366,12 +366,12 @@ section {}
 		position: relative;
 		left: 0;
 		margin-bottom: .5em;
-		background: #0ab;
+		background: #09a;
 		border-radius: 5px;
 	}
 
 	#preview > #current {
-		background: #f08;
+		background: #83f;
 	}
 
 	#preview > .move {
@@ -439,7 +439,7 @@ section {}
 	}
 
 	#library > a > button:hover {
-		background: #f08;
+		background: #83f;
 	}
 
 	#library > a:hover > button,
@@ -448,11 +448,11 @@ section {}
 	}
 
 #library > a.selected {
-	color: #0ab;
+	color: #09a;
 }
 
 		#library > a.selected > canvas {
-			background: #0ab;
+			background: #09a;
 		}
 
 #library > footer {
