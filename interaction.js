@@ -354,7 +354,7 @@ Array.from(values.querySelectorAll("input")).forEach(function(input, i) {
 		P1.style.prop(bezierCanvas.coordinatesToOffsets(b.P1));
 		P2.style.prop(bezierCanvas.coordinatesToOffsets(b.P2));
 		
-		update();
+		update(true);
 		updateDelayed();
 	};
 });
@@ -425,7 +425,7 @@ function getDuration() {
 	return (isNaN(val = Math.round(duration.value * 10) / 10)) ? null : val;
 }
 
-function update() {
+function update(skipText) {
 	// Redraw canvas
 	bezierCanvas.bezier = 
 	currentCanvas.bezier = 
@@ -448,8 +448,10 @@ function update() {
 	var params = $$('.param', bezierCode), 
 		prettyOffsets = bezier.coordinates.toString().split(',');
 	
-	for(var i=params.length; i--;) {
-		params[i].value = prettyOffsets[i];
+	if (!skipText) {
+		for(var i=params.length; i--;) {
+			params[i].value = prettyOffsets[i];
+		}
 	}
 }
 function updateCopyInputs(){
