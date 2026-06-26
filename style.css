@@ -61,7 +61,7 @@ h1 {
 }
 
 a {
-	color: #85d;
+	color: #48f;
 }
 
 a:hover {
@@ -78,7 +78,7 @@ a:hover {
 button, .button {
 	padding: .3em .5em;
 	border: 0;
-	background: #85d;
+	background: #48f;
 	color: white;
 	font-size: 50%;
 	text-transform: uppercase;
@@ -88,11 +88,11 @@ button, .button {
 }
 
 button:hover, .button:hover {
-	background: #74c;
+	background: #46c;
 }
 
 button:focus, .button:focus {
-	box-shadow: 0 0 5px 2px yellow;
+	box-shadow: 0 0 5px 2px #48f;
 }
 
 #copybuttons {
@@ -106,12 +106,12 @@ button:focus, .button:focus {
 }
 
 #copybuttons.copyoptions-open #copy {
-	background-color: #85d;
+	background-color: #48f;
 	border-bottom-left-radius: 0;
 }
 
 #copybuttons.copyoptions-open #copyoptionstoggle {
-	background-color: #74c;
+	background-color: #46c;
 	border-bottom-right-radius: 0;
 	box-shadow: none;
 }
@@ -128,7 +128,7 @@ button:focus, .button:focus {
 	position: absolute;
 	top: 100%;
 	right: 0;
-	background-color: #85d;
+	background-color: #48f;
 	padding: 0.2em 0.3em;
 	border-radius: .2em 0 .2em .2em;
 	overflow: hidden;
@@ -142,7 +142,7 @@ button:focus, .button:focus {
 
 #copyoptions > input {
 	opacity: 1;
-	background-color: #85d;
+	background-color: #48f;
 	margin-bottom: 0.4em;
 	margin-top: 0.4em;
 	display: block;
@@ -158,7 +158,7 @@ button:focus, .button:focus {
 }
 
 #copyoptions > input:hover {
-	background: #74c;
+	background: #46c;
 }
 
 #copybuttons.copyoptions-open #copyoptions {
@@ -177,18 +177,18 @@ button:focus, .button:focus {
 
 	#copybuttons:hover #copy,
 	#copybuttons:hover #copyoptionstoggle {
-		background: #85d;
+		background: #48f;
 	}
 
 	#copybuttons #copy:hover,
 	#copybuttons #copyoptionstoggle:hover,
 	#copybuttons.copyoptions-open:hover #copyoptionstoggle {
-		background: #74c;
+		background: #46c;
 	}
 
 @keyframes copied {
-	0%   { background: #5a4; }
-	100% { background: #85d; }
+	0%   { background: #2a4; }
+	100% { background: #48f; }
 }
 #copybuttons.copied #copyoptionstoggle,
 #copybuttons.copied #copy {
@@ -209,14 +209,14 @@ input[type="range"] {
 
 	input[type="range"]::-webkit-slider-thumb {
 		-webkit-appearance: none;
-		background: #f8b;
+		background: #9af;
 		height: 13px;
 		width: 13px;
 		border-radius: 50%;
 		box-shadow: -1px -1px 5px rgba(0,0,0,.5) inset,
-			-1px -1px 4px 3px #83f inset,
+			-1px -1px 4px 3px #48f inset,
 			1px 1px 3px rgba(0,0,0,.3),
-			-199px 0 0 198px rgba(136, 0, 255, .2);
+			-199px 0 0 198px rgba(0, 136, 255, .2);
 	}
 
 	input[type="range"]:in-range {
@@ -398,7 +398,7 @@ section {}
 
 	#library > a > canvas,
 	#library > a > span {
-		transition: inherit;
+		transition: background 0.5s;
 	}
 
 	#library > a > canvas {
@@ -439,7 +439,7 @@ section {}
 	}
 
 	#library > a > button:hover {
-		background: #85d;
+		background: #48f;
 	}
 
 	#library > a:hover > button,
@@ -453,6 +453,7 @@ section {}
 
 		#library > a.selected > canvas {
 			background: #76c;
+			outline: 4px #48f solid;
 		}
 
 #library > footer {
@@ -528,6 +529,10 @@ body > footer {
 
 	body > footer > a:not(:hover) {
 		color: inherit;
+	}
+
+	body > footer > a:hover {
+		color: #f08;
 	}
 
 	body > footer > a.button {
