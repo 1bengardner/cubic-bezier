@@ -61,7 +61,7 @@ h1 {
 }
 
 a {
-	color: #83f;
+	color: #85d;
 }
 
 a:hover {
@@ -78,7 +78,7 @@ a:hover {
 button, .button {
 	padding: .3em .5em;
 	border: 0;
-	background: #83f;
+	background: #85d;
 	color: white;
 	font-size: 50%;
 	text-transform: uppercase;
@@ -88,7 +88,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-	background: #62a;
+	background: #74c;
 }
 
 button:focus, .button:focus {
@@ -106,12 +106,12 @@ button:focus, .button:focus {
 }
 
 #copybuttons.copyoptions-open #copy {
-	background-color: #83f;
+	background-color: #85d;
 	border-bottom-left-radius: 0;
 }
 
 #copybuttons.copyoptions-open #copyoptionstoggle {
-	background-color: #62a;
+	background-color: #74c;
 	border-bottom-right-radius: 0;
 	box-shadow: none;
 }
@@ -128,7 +128,7 @@ button:focus, .button:focus {
 	position: absolute;
 	top: 100%;
 	right: 0;
-	background-color: #83f;
+	background-color: #85d;
 	padding: 0.2em 0.3em;
 	border-radius: .2em 0 .2em .2em;
 	overflow: hidden;
@@ -142,7 +142,7 @@ button:focus, .button:focus {
 
 #copyoptions > input {
 	opacity: 1;
-	background-color: #83f;
+	background-color: #85d;
 	margin-bottom: 0.4em;
 	margin-top: 0.4em;
 	display: block;
@@ -158,7 +158,7 @@ button:focus, .button:focus {
 }
 
 #copyoptions > input:hover {
-	background: #62a;
+	background: #74c;
 }
 
 #copybuttons.copyoptions-open #copyoptions {
@@ -177,18 +177,18 @@ button:focus, .button:focus {
 
 	#copybuttons:hover #copy,
 	#copybuttons:hover #copyoptionstoggle {
-		background: #83f;
+		background: #85d;
 	}
 
 	#copybuttons #copy:hover,
 	#copybuttons #copyoptionstoggle:hover,
 	#copybuttons.copyoptions-open:hover #copyoptionstoggle {
-		background: #62a;
+		background: #74c;
 	}
 
 @keyframes copied {
 	0%   { background: #5a4; }
-	100% { background: #83f; }
+	100% { background: #85d; }
 }
 #copybuttons.copied #copyoptionstoggle,
 #copybuttons.copied #copy {
@@ -366,7 +366,7 @@ section {}
 		position: relative;
 		left: 0;
 		margin-bottom: .5em;
-		background: #09a;
+		background: #76c;
 		border-radius: 5px;
 	}
 
@@ -412,7 +412,7 @@ section {}
 
 	#library > a:hover > canvas,
 	#library > a:focus > canvas {
-		background: #ACD0D5;
+		background: #aaaad4;
 	}
 
 	#library > a > span {
@@ -424,7 +424,7 @@ section {}
 
 	#library > a:hover > span,
 	#library > a:focus > span {
-		color: #568C93;
+		color: #575794;
 	}
 
 	#library > a > button {
@@ -439,7 +439,7 @@ section {}
 	}
 
 	#library > a > button:hover {
-		background: #83f;
+		background: #85d;
 	}
 
 	#library > a:hover > button,
@@ -448,11 +448,11 @@ section {}
 	}
 
 #library > a.selected {
-	color: #09a;
+	color: #76c;
 }
 
 		#library > a.selected > canvas {
-			background: #09a;
+			background: #76c;
 		}
 
 #library > footer {
