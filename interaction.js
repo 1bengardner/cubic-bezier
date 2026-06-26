@@ -349,7 +349,15 @@ Array.from(values.querySelectorAll("input")).forEach(function(input, i) {
 		
 		coords[i] = parseFloat(this.value);
 		
-		var b = new CubicBezier(coords);
+		input.style.removeProperty("color");
+		try {
+			var b = new CubicBezier(coords);
+		} catch (e) {
+			if (e.startsWith("Wrong coordinate")) {
+				input.style.color = "red";
+			}
+			throw e;
+		}
 		
 		P1.style.prop(bezierCanvas.coordinatesToOffsets(b.P1));
 		P2.style.prop(bezierCanvas.coordinatesToOffsets(b.P2));
@@ -451,6 +459,7 @@ function update(skipText) {
 	if (!skipText) {
 		for(var i=params.length; i--;) {
 			params[i].value = prettyOffsets[i];
+			params[i].style.removeProperty("color");
 		}
 	}
 }
