@@ -128,7 +128,7 @@ var self = window.bezierLibrary = {
 	},
 	
 	save: function(curves) {
-		localStorage.curves = JSON.stringify(curves || self.curves);
+		localStorage['cubic-bezier/curves'] = JSON.stringify(curves || self.curves);
 	},
 	
 	thumbnailStyle: {
@@ -168,11 +168,11 @@ var ctx = curve.getContext("2d"),
 	pixelDepth = window.devicePixelRatio || 1;
 
 // Add predefined curves
-if (!localStorage.curves) {
+if (!localStorage['cubic-bezier/curves']) {
 	bezierLibrary.save(CubicBezier.predefined);
 }
 
-bezierLibrary.curves = JSON.parse(localStorage.curves);
+bezierLibrary.curves = JSON.parse(localStorage['cubic-bezier/curves']);
 
 bezierLibrary.render();
 
@@ -368,7 +368,7 @@ window['import'].onclick = function() {
 };
 
 window['export'].onclick = function() {
-	json.value = localStorage.curves;
+	json.value = localStorage['cubic-bezier/curves'];
 	
 	
 	importexport.className = 'export';
