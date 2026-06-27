@@ -682,7 +682,6 @@ body > footer {
 .param {
 		text-align: right;
 		font: inherit;
-		width: 3ch;
 		min-width: 1ch;
 		field-sizing: content;
 		background: transparent;
