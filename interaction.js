@@ -199,6 +199,8 @@ P2.onpointerdown = function() {
 	var me = this;
 	
 	document.onpointermove = function drag(e) {
+		document.querySelector('#curve-display').style.touchAction = 'pinch-zoom';
+		
 		var x = e.pageX, y = e.pageY,
 			left = curveBoundingBox.left,
 			top = curveBoundingBox.top;
@@ -219,6 +221,8 @@ P2.onpointerdown = function() {
 	};
 	
 	document.onpointerup = function () {
+		document.querySelector('#curve-display').style.removeProperty('touch-action');
+		
 		me.focus();
 		
 		document.onpointermove = document.onpointerup = null;
