@@ -194,11 +194,11 @@ updateDelayed();
  * Event handlers
  */
 // Make the handles draggable
-P1.onmousedown = 
-P2.onmousedown = function() { 
+P1.onpointerdown = 
+P2.onpointerdown = function() { 
 	var me = this;
 	
-	document.onmousemove = function drag(e) {
+	document.onpointermove = function drag(e) {
 		var x = e.pageX, y = e.pageY,
 			left = curveBoundingBox.left,
 			top = curveBoundingBox.top;
@@ -218,10 +218,10 @@ P2.onmousedown = function() {
 		update();
 	};
 	
-	document.onmouseup = function () {
+	document.onpointerup = function () {
 		me.focus();
 		
-		document.onmousemove = document.onmouseup = null;
+		document.onpointermove = document.onpointerup = null;
 	}
 };
 
@@ -253,8 +253,8 @@ P2.onkeydown = function(evt) {
 
 P1.onblur =
 P2.onblur =
-P1.onmouseup =
-P2.onmouseup = updateDelayed;
+P1.onpointerup =
+P2.onpointerup = updateDelayed;
 
 curve.onclick = function(evt) {
 	var left = curveBoundingBox.left,
@@ -278,7 +278,7 @@ curve.onclick = function(evt) {
 	}
 };
 
-curve.onmousemove = function(evt) {
+curve.onpointermove = function(evt) {
 	var left = curveBoundingBox.left,
 		top = curveBoundingBox.top,
 		height = curveBoundingBox.height,

@@ -358,6 +358,7 @@ canvas#curve {
 
 	-webkit-user-select: none;
 	user-select: none;
+	touch-action: pinch-zoom;
 }
 
 section {}
