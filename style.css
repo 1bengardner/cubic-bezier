@@ -58,6 +58,7 @@ body {
 
 h1 {
 	font-size: 220%;
+	white-space: nowrap;
 }
 
 a {
@@ -69,10 +70,12 @@ a:hover {
 }
 
 	h1 a {
-		font-size: clamp(1.2rem, 2vw + .75rem, 2.5rem);
-		white-space: nowrap;
 		color: inherit;
 		text-decoration: none;
+	}
+
+	h1 code {
+		font-size: clamp(1.2rem, 2vw + .75rem, 2.5rem);
 	}
 
 button, .button {
@@ -88,7 +91,7 @@ button, .button {
 }
 
 button:hover, .button:hover {
-	background: #46c;
+	background: #37e;
 }
 
 button:focus, .button:focus {
@@ -111,7 +114,7 @@ button:focus, .button:focus {
 }
 
 #copybuttons.copyoptions-open #copyoptionstoggle {
-	background-color: #46c;
+	background-color: #37e;
 	border-bottom-right-radius: 0;
 	box-shadow: none;
 }
@@ -132,7 +135,7 @@ button:focus, .button:focus {
 	padding: 0.2em 0.3em;
 	border-radius: .2em 0 .2em .2em;
 	overflow: hidden;
-	z-index: 2;
+	z-index: 3;
 	opacity: 0;
 	font-size: 0.1em;
 	transition: height 0.5s cubic-bezier(.1,.74,.33,.95);
@@ -158,7 +161,7 @@ button:focus, .button:focus {
 }
 
 #copyoptions > input:hover {
-	background: #46c;
+	background: #37e;
 }
 
 #copybuttons.copyoptions-open #copyoptions {
@@ -183,7 +186,7 @@ button:focus, .button:focus {
 	#copybuttons #copy:hover,
 	#copybuttons #copyoptionstoggle:hover,
 	#copybuttons.copyoptions-open:hover #copyoptionstoggle {
-		background: #46c;
+		background: #37e;
 	}
 
 @keyframes copied {
@@ -297,12 +300,14 @@ header {
 }
 
 #P0, #P3 {
-	background: white;
+	background: #83f;
 	pointer-events: none;
 }
 
 #P1, #P2 {
 	cursor: pointer;
+	border: 4px dashed rgba(0,0,255,.3);
+	z-index: 2;
 }
 
 #P0 {
@@ -311,11 +316,23 @@ header {
 }
 
 #P1 {
-	background: #83f;
+	background: #d18;
 }
 
 #P2 {
 	background: #09a;
+}
+
+#P1:hover {
+	background: #c08;
+}
+
+#P2:hover {
+	background: #089;
+}
+
+#P1:active, #P2:active {
+	border: 4px solid rgba(0,0,0,.3);
 }
 
 #P3 {
@@ -324,7 +341,7 @@ header {
 }
 
 #P1x, #P1y {
-	color: #83f;
+	color: #d18;
 }
 
 #P2x, #P2y {
@@ -351,7 +368,7 @@ section {}
 		font-weight: normal;
 	}
 
-	section > h1 + p {
+	p {
 		margin: -.5em 0 1em 0;
 		color: gray;
 	}
@@ -466,7 +483,7 @@ section {}
 	position: fixed;
 	top: 2em;
 	left: 50%;
-	z-index: 2;
+	z-index: 3;
 	width: 500px;
 	padding: 1em 2.6em 1em 1em;
 	margin-left: -250px;
@@ -552,7 +569,7 @@ body > footer {
 	}
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
 	body {
 		grid-template:
 			'header header'
@@ -562,13 +579,6 @@ body > footer {
 
 	header {
 		text-align: center;
-	}
-
-	header > h1 {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
 	}
 }
 
@@ -583,12 +593,19 @@ body > footer {
 		padding: 0 5% 1em;
 	}
 
-	h1 a {
+	h1 code {
 		width: 100%;
 	}
 
 	#copybuttons {
-		margin-left: auto;
+		margin-bottom: 1em;
+	}
+
+	header > h1 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -604,7 +621,7 @@ body > footer {
 }
 
 @media (max-width: 600px){
-	h1 a {
+	h1 code {
 		letter-spacing: -.05ch;
 	}
 }
@@ -665,7 +682,8 @@ body > footer {
 .param {
 		text-align: right;
 		font: inherit;
-		width: 4ch;
+		width: 3ch;
+		min-width: 1ch;
 		field-sizing: content;
 		background: transparent;
 		border: none;

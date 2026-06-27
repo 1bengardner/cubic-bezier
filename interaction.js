@@ -349,12 +349,13 @@ Array.from(values.querySelectorAll("input")).forEach(function(input, i) {
 		
 		coords[i] = parseFloat(this.value);
 		
-		input.style.removeProperty("color");
+		input.removeAttribute("style");
 		try {
 			var b = new CubicBezier(coords);
 		} catch (e) {
 			if (e.startsWith("Wrong coordinate")) {
-				input.style.color = "red";
+				input.style.color = "#912";
+				input.style.textDecoration = "line-through";
 			}
 			throw e;
 		}
