@@ -464,7 +464,7 @@ function update(skipText) {
 	if (!skipText) {
 		for(var i=params.length; i--;) {
 			params[i].value = prettyOffsets[i];
-			params[i].style.removeProperty("color");
+			params[i].removeAttribute("style");
 		}
 	}
 }
