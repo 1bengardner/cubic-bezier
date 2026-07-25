@@ -561,17 +561,17 @@ body > footer {
 	}
 
 .param {
-		text-align: right;
-		font: inherit;
-		min-width: 1ch;
-		field-sizing: content;
-		background: transparent;
-		border: none;
-		outline: none;
+	text-align: right;
+	font: inherit;
+	min-width: 1ch;
+	field-sizing: content;
+	background: transparent;
+	border: none;
+	outline: none;
 }
 
 .param:focus {
-		background: rgba(255,255,255,.15);
+	background: rgba(255,255,255,.15);
 }
 
 @media (max-width: 1330px){
