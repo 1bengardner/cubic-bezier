@@ -560,6 +560,20 @@ body > footer {
 		background: #ddd;
 	}
 
+.param {
+		text-align: right;
+		font: inherit;
+		min-width: 1ch;
+		field-sizing: content;
+		background: transparent;
+		border: none;
+		outline: none;
+}
+
+.param:focus {
+		background: rgba(255,255,255,.15);
+}
+
 @media (max-width: 1330px){
 	body {
 		grid-template:
@@ -624,71 +638,7 @@ body > footer {
 	h1 code {
 		letter-spacing: -.05ch;
 	}
-}
-
-/* Carbon Ads */
-
-#carbonads {
-	display: block;
-	overflow: hidden;
-	margin: 2em auto 0;
-	padding: 1em;
-	max-width: 360px;
-	border: solid 1px hsl(0, 0%, 88%);
-	border-radius: 4px;
-	background-color: #f4f4f4;
-	box-shadow: inset 0 1px #fafafa;
-	font-size: 12px;
-	line-height: 1.5;
-}
-
-#carbonads a {
-	color: #4d4d4d;
-	text-decoration: none;
-	text-shadow: 0 1px #fafafa;
-	transition: color .15s ease-in-out;
-}
-
-#carbonads a:hover { color: #ff0088; }
-
-	#carbonads span {
-		position: relative;
-		display: block;
-		overflow: hidden;
-	}
-
-	.carbon-img {
-		float: left;
-		margin-right: 1em;
-	}
-
-	.carbon-img img { display: block; }
-
-	.carbon-text {
-		display: block;
-		float: left;
-		max-width: calc(100% - 130px - 1em);
-		text-align: left;
-	}
-
-	.carbon-poweredby {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		display: block;
-		font-size: 11px;
-	}
-
-.param {
-		text-align: right;
-		font: inherit;
-		min-width: 1ch;
-		field-sizing: content;
-		background: transparent;
-		border: none;
-		outline: none;
-}
-
-.param:focus {
-		background: rgba(255,255,255,.15);
+  .param {
+    field-sizing: fixed;
+  }
 }
