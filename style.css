@@ -548,8 +548,12 @@ body > footer {
 		color: inherit;
 	}
 
-	body > footer > a:hover {
+	body > footer > a:hover:nth-child(1) {
 		color: #f08;
+	}
+
+	body > footer > a:hover:nth-child(2) {
+		color: #63c;
 	}
 
 	body > footer > a.button {
